@@ -3,14 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Axon - Open Source Project</title>
+
+  <!-- Primary Meta Tags -->
+  <title>Axon: Open Source Service Worker Fabric - Multiprocessing Toolkit for the Modern Web</title>
+  <meta name="title" content="Axon: Open Source Service Worker Fabric">
+  <meta name="description" content="Axon is an open-source framework for Service Workers, Web Workers, and WebAssembly. Boost performance with multiprocessing and collaborative tools for the modern web.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://axon-open.github.io/">
+  <meta property="og:title" content="Axon: Open Source Service Worker Fabric">
+  <meta property="og:description" content="Axon is an open-source framework for Service Workers, Web Workers, and WebAssembly. Multiprocessing for the modern web.">
+  <!-- Ideally, use your hosted banner here: -->
+  <meta property="og:image" content="https://raw.githubusercontent.com/axon-open/axon/main/banner.png">
+  <meta property="og:site_name" content="Axon">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://axon-open.github.io/">
+  <meta name="twitter:title" content="Axon: Open Source Service Worker Fabric">
+  <meta name="twitter:description" content="Axon is an open-source framework for Service Workers, Web Workers, and WebAssembly. Multiprocessing for the modern web.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/axon-open/axon/main/banner.png">
+  <meta name="twitter:site" content="@axonopensource">
+
+  <!-- Apple iMessage -->
+  <meta name="apple-mobile-web-app-title" content="Axon">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- iMessage & modern messengers use og:image or twitter:image -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(120deg, #0f2027, #2c5364 85%);
+      background: linear-gradient(120deg,#35e8ad 10%,#0f2027 60%,#2c5364 100%);
+      /* nice green highlight and gradient for preview background */
       color: #f7f8fa;
       min-height: 100vh;
       font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+
+      /* fallback background image (optional SVG pattern - hosted, replace with your link if needed) */
+      background-image: url('https://raw.githubusercontent.com/axon-open/axon/main/axon-preview-bg.svg'), linear-gradient(120deg,#35e8ad 10%,#0f2027 60%,#2c5364 100%);
+      background-repeat: no-repeat, no-repeat;
+      background-position: top 10% center, center;
+      background-size: 600px, cover;
     }
     .navbar {
       background: transparent;
@@ -117,14 +151,14 @@
       </div>
     </div>
   </nav>
-  
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <h1>Axon V0.6</h1>
       <p>
-       Open Source Servic Worker Fabric<br>
-       Webworkers & WebAssembly (WASM)
+       Open Source Service Worker Fabric<br>
+       Web Workers & WebAssembly (WASM)
       </p>
       <a href="https://github.com/psytron/fabric" target="_blank" class="btn btn-lg btn-outline-info px-4 rounded-pill shadow-sm">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="me-2" viewBox="0 0 16 16">
@@ -149,7 +183,7 @@
             <svg fill="none" stroke="currentColor" stroke-width="2" width="40" height="40" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
           </div>
           <h5 class="fw-semibold mb-2" style="color: #fff;">Multiprocessing</h5>
-          <p class="mb-0" style="color: #fff;">Offload web sokets and streaming to workers. Reduce CPU load and increase concurrency.</p>          
+          <p class="mb-0" style="color: #fff;">Offload web sockets and streaming to workers. Reduce CPU load and increase concurrency.</p>
         </div>
       </div>
       <div class="col-md-4">
