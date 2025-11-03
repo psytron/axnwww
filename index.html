@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Axon - Open Source Project</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(120deg, #0f2027, #2c5364 85%);
+      color: #f7f8fa;
+      min-height: 100vh;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    }
+    .navbar {
+      background: transparent;
+      border-bottom: 2px solid #23334722;
+    }
+    .axon-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 12px;
+      filter: drop-shadow(0 0 12px #3ddad7aa);
+    }
+    .hero {
+      padding: 8vh 0 4vh 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      letter-spacing: 0.03em;
+      font-weight: 700;
+      background: linear-gradient(90deg, #3ddad7 0%, #a1ffce 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+             background-clip: text;
+    }
+    .hero p {
+      font-size: 1.37rem;
+      max-width: 540px;
+      margin: 1.5rem auto 0 auto;
+      color: #e3e9f6;
+    }
+    .hero .btn {
+      margin-top: 2rem;
+    }
+    .features {
+      margin-top: 5vh;
+    }
+    .feature-icon {
+      font-size: 2.3rem;
+      color: #3ddad7;
+    }
+    .card {
+      background: #233347bb;
+      border: none;
+      border-radius: 1.3rem;
+      transition: transform 0.18s cubic-bezier(.2,.81,.21,1.02);
+      backdrop-filter: blur(2px);
+      color: #fff;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.025);
+      box-shadow: 0 4px 28px 0 #0003;
+    }
+    .footer {
+      border-top: 1px solid #23334744;
+      text-align: center;
+      color: #b4c0cc;
+      padding: 2rem 0 1.5rem 0;
+      margin-top: 60px;
+      font-size: 1rem;
+    }
+    /* Scrollbar minimalism */
+    ::-webkit-scrollbar {
+      width: 8px;
+      background: #1f2b36;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3ddad755;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <!-- Minimalist Logo: Axon neuron dot -->
+        <svg class="axon-logo" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="20" fill="#3ddad7" opacity="0.14"/>
+          <circle cx="24" cy="24" r="9.5" fill="#3ddad7" opacity="0.6"/>
+          <circle cx="24" cy="24" r="4.5" fill="#3ddad7"/>
+          <line x1="24" y1="7" x2="24" y2="15.5" stroke="#3ddad7" stroke-width="2"/>
+          <line x1="39" y1="24" x2="31.5" y2="24" stroke="#3ddad7" stroke-width="2"/>
+        </svg>
+        <span class="fs-4 fw-bold" style="letter-spacing:0.05em;">Axon</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#github">GitHub</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#community">Community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Axon V0.6</h1>
+      <p>
+       Open Source Servic Worker Fabric<br>
+       Webworkers & WebAssembly (WASM)
+      </p>
+      <a href="https://github.com/axon-open/axon" target="_blank" class="btn btn-lg btn-outline-info px-4 rounded-pill shadow-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.22 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        View on GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="container features" id="features">
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 text-center">
+        <h2 class="fw-bold" style="letter-spacing: .01em; color:#3ddad7;">Why Axon?</h2>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 p-4">
+          <div class="feature-icon mb-3">
+            <svg fill="none" stroke="currentColor" stroke-width="2" width="40" height="40" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h5 class="fw-semibold mb-2" style="color: #fff;">Unified Eventing</h5>
+          <p class="mb-0" style="color: #fff;">Web and Service worker events with standardized container syntax to enable easy integration.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-4">
+          <div class="feature-icon mb-3">
+            <svg fill="none" stroke="currentColor" stroke-width="2" width="40" height="40" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h5 class="fw-semibold mb-2" style="color: #fff;">Open Collaboration</h5>
+          <p class="mb-0" style="color: #fff;">Community-driven. Anyone can contribute, share ideas, build plugins, and push the boundaries together.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-4">
+          <div class="feature-icon mb-3">
+            <svg fill="none" stroke="currentColor" stroke-width="2" width="40" height="40" viewBox="0 0 24 24"><path d="M12 19v-7"/><path d="M5 12l7-7 7 7"/></svg>
+          </div>
+          <h5 class="fw-semibold mb-2" style="color: #fff;">Multiprocessing</h5>
+          <p class="mb-0" style="color: #fff;">Offload web sokets and streaming to workers. Reduce CPU load and increase concurrency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub/Community Section -->
+  <section class="container" id="community" style="margin-top:7vh;">
+    <div class="row align-items-center mb-4">
+      <div class="col-lg-6 order-2 order-lg-1 py-3">
+        <h3 class="fw-bold mb-2" style="color:#3ddad7;">Join the Axon Network</h3>
+        <p>
+          Axon is for everyone. Connect with contributors and join discussions:<br>
+          <ul class="mt-2" style="color: #a1ffce;">
+            <li><a href="https://github.com/axon-open/axon" id="github" target="_blank" style="color:#9ef3e7;">Star us on GitHub</a></li>
+            <li><a href="https://discord.com/invite/axon" target="_blank" style="color:#9ef3e7;">Join the Discord</a></li>
+            <li><a href="https://twitter.com/axonopensource" target="_blank" style="color:#9ef3e7;">Follow on Twitter/X</a></li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 text-center">
+        <!-- Abstract neuron mesh illustration -->
+        <svg width="260" height="164" viewBox="0 0 260 164" fill="none" class="img-fluid">
+          <ellipse cx="130" cy="82" rx="110" ry="68" fill="#3ddad7" fill-opacity="0.07"/>
+          <ellipse cx="130" cy="82" rx="55" ry="34" fill="#3ddad7" fill-opacity="0.13"/>
+          <circle cx="128" cy="73" r="16" fill="#3ddad7" fill-opacity="0.32"/>
+          <circle cx="155" cy="102" r="8" fill="#3ddad7" fill-opacity="0.19"/>
+          <circle cx="105" cy="118" r="6" fill="#3ddad7" fill-opacity="0.14"/>
+          <circle cx="180" cy="81" r="4" fill="#3ddad7" fill-opacity="0.21"/>
+          <circle cx="88" cy="59" r="4" fill="#3ddad7" fill-opacity="0.23"/>
+          <line x1="128" y1="73" x2="155" y2="102" stroke="#3ddad7" stroke-width="2" opacity="0.26"/>
+          <line x1="128" y1="73" x2="105" y2="118" stroke="#3ddad7" stroke-width="2" opacity="0.26"/>
+          <line x1="128" y1="73" x2="180" y2="81" stroke="#3ddad7" stroke-width="2" opacity="0.22"/>
+          <line x1="128" y1="73" x2="88" y2="59" stroke="#3ddad7" stroke-width="2" opacity="0.22"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <span>&copy; <span id="year"></span> Axon — Built with 💡 by the Open Source Community</span>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
